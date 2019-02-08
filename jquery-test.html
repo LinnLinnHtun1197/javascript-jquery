@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery</title>
+</head>
+<body>
+<p id="note-1"></p>
+<p id="note">Hello Jquery</p>
+<button>Toggle</button>
+<script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
+<script>
+	$("#note").html("My simple JQuery testingMy simple JQuery testingMy simple JQuery testingMy simple JQuery testingMy simple JQuery testingMy simple JQuery testingMy simple JQuery testingMy simple JQuery testingMy simple JQuery testingMy simple JQuery testingMy simple JQuery testingMy simple JQuery testingMy simple JQuery testingMy simple JQuery testingMy simple JQuery testingMy simple JQuery testing");
+	$("#note").css({
+		"background-color":"blue",
+		"color":"white",
+		"padding":"10px"
+	});
+	// $("#note").fadeOut('slow',function(){
+	// 	alert("This is fadeOut function");
+	// });
+	// $("#note").clone().prependTo('#note-1');
+	$("button").on("click",function(){
+		$("#note").slideToggle("fast");
+	})
+</script>
+</body>
+</html>

@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	<link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
+	<title>Validate each field</title>
 </head>
 <body>
 	<form action="" id="comment">
@@ -28,5 +27,24 @@
 	</form>
 	<script type="text/javascript" src="validate/dist/jquery.validate.js"></script>
 	<script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#comment").validate({
+				rules: {
+					name: {
+						"required": true,
+						"minlength": 2
+					}
+					email: {
+						"required":true,
+						"email": true
+					}
+					comment:{
+						"required": true
+					}
+				}
+			});
+		});
+	</script>
 </body>
 </html>
